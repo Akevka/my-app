@@ -1,0 +1,31 @@
+
+
+
+.nav{
+    background-color: royalblue;
+    grid-area: n;
+    height: 600px;
+    padding: 5px 15px;
+    border-radius: 15px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.item {
+
+    color: white;
+    padding-top: 20px;
+}
+.item a {
+   color:white;
+    text-decoration: none;
+}
+
+.item a.active {
+    color: #d2e50b;
+
+}
+.item a:hover {
+    color: darkslateblue;
+    
+}
+

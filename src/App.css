@@ -44,33 +44,26 @@ ul li {
   margin: 0 auto;
   display: grid;
   width: 1200px;
+  height: 600px;
   grid-template-areas:
   "h h h"
   "n c c";
 
   grid-template-rows: 90px 1fr;
-  grid-template-columns:120px 2fr  10fr;
-  grid-gap: 3px;
+  grid-template-columns:180px 2fr  10fr;
+  grid-gap: 10px;
+}
+
+.app-wrapper-content{
+
+
+  background-color: #dae2ea;
+  grid-area: c;
+  border-radius: 15px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 
 
-.header{
-background-color: royalblue;
-  grid-area: h;
-}
-.header img{
-  padding-top: 5px;
-  padding-left: 20px;
-  width:80px;
-}
 
-.nav{
-  background-color: royalblue;
-  grid-area: n;
 
-}
-.content{
-  background-color: greenyellow;
- grid-area: c;
-}
