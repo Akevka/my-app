@@ -6,11 +6,11 @@ import {maxLengthCreator, required} from "../../../utils/validators/validators";
 import {Textarea} from "../../common/FormsControls/FormControls";
 
 
+ const MyPosts = React.memo(props => {
 
+     console.log("RENDER YO");
 
-const MyPosts = (props) => {
-
-let postsElements = props.posts.map( p => <Post message={p.message} likesCount={p.likesCount}/>)
+    let postsElements = props.posts.map(p => <Post message={p.message} likesCount={p.likesCount}/>)
 
     let newPostElement = React.createRef();
 
@@ -29,15 +29,15 @@ let postsElements = props.posts.map( p => <Post message={p.message} likesCount={
         </div>
 
     )
-}
+});
 
-const maxLength10 = maxLengthCreator(10);
+const maxLength30 = maxLengthCreator(30);
 
 const AddNewPostForm = (props) => {
     return (
         <form onSubmit={props.handleSubmit}>
             <div>
-                <Field component={Textarea} name="newPostText" validate={[required,maxLength10]} placeholder={"Post message"}/>
+                <Field component={Textarea} name="newPostText" validate={[required,maxLength30]} placeholder={"Post message"}/>
             </div>
             <div><button >Add post</button></div>
 

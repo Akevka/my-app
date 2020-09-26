@@ -1,0 +1,8 @@
+.selectedPage {
+    font-weight: bold;
+}
+
+.pageCount{
+    padding-left: 50px;
+    margin-bottom: 20px;
+}
