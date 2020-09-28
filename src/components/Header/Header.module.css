@@ -9,12 +9,15 @@
 .header img{
     padding-top: 5px;
     padding-left: 20px;
-    width:80px;
+    width:98px;
 }
 .loginBlock {
     float: right;
     padding-right: 20px;
 }
 .loginBlock a {
+    color: #dae2ea;
+}
+.name{
     color: #dae2ea;
 }

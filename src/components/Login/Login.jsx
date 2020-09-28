@@ -6,20 +6,20 @@ import {connect} from "react-redux";
 import {login} from "../../Redux/auth-reducer";
 import {Redirect} from "react-router-dom";
 import style from "./../common/FormsControls/FormControls.module.css"
-
+import s from "./Login.module.css"
 
 
 
 const LoginForm = (props) => {
     return (
-        <div>
+        <div className={s.loginForm}>
             <form onSubmit={props.handleSubmit}>
-              <div>
+              <div className={s.email}>
                   <Field placeholder={"Email"} name={"email"}
                          validate={[required]}
                          component={Input}/>
               </div>
-              <div>
+              <div className={s.pass}>
                   <Field    validate={[required]}
                             component={Input}
                             name={"password"} placeholder={"Password"} type={"password"}/>
@@ -32,7 +32,7 @@ const LoginForm = (props) => {
                 </div>
                 }
               <div>
-                  <button>Login</button>
+                  <button class="btn btn-primary" type="submit" value="Submit">Login</button>
               </div>
             </form>
         </div>

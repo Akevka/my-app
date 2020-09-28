@@ -1,21 +1,23 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
 import './App.css';
 import HeaderContainer from "./components/Header/HeaderContainer";
 import Navbar from "./components/Navbar/Navbar";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
-import {BrowserRouter, Redirect, Route, withRouter} from "react-router-dom";
-import DialogsContainer from "./components/Dialogs/DialogsContainer";
+import {BrowserRouter,  Route} from "react-router-dom";
+//import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import UsersContainer from "./components/Users/UsersContainer";
-import ProfileContainer from "./components/Profile/ProfileContainer";
+//import ProfileContainer from "./components/Profile/ProfileContainer";
 import LoginPage from "./components/Login/Login";
 import {connect} from "react-redux";
-import {getAuthUserData} from "./Redux/auth-reducer";
-import {compose} from "redux";
+
 import {initializeApp} from "./Redux/app-reducer";
 import Preloader from "./components/common/preloader/Preloader";
+import {withSuspense} from "./hoc/withSuspense";
+
+const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'));
+const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer'));
 
 
 class App extends Component {
@@ -35,9 +37,9 @@ class App extends Component {
                     <HeaderContainer/>
                     <Navbar/>
                     <div className='app-wrapper-content'>
-                        <Route path='/dialogs' render={() => <DialogsContainer/>}/>
+                        <Route path='/dialogs' render= { withSuspense(DialogsContainer)}/>
                         <Route path='/profile/:userId?'
-                               render={() => <ProfileContainer/>}/>
+                               render={ withSuspense(ProfileContainer)}/>
                         <Route path='/news' component={News}/>
                         <Route path='/music' component={Music}/>
                         <Route path='/settings' component={Settings}/>
