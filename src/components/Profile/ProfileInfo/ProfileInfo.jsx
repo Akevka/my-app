@@ -10,13 +10,21 @@ const ProfileInfo = (props) => {
         return <Preloader/>
     }
 
+    const onMainPhotoSelected = (e) => {
+            if (e.target.files.length) {
+                props.savePhoto(e.target.files[0]);
+            }
+    }
+
+
     return <div className={s.content}>
 
         {/*<div>*/}
         {/*    <img src='http://www.radionetplus.ru/uploads/posts/2013-05/1369460629_panda-1.jpeg'/>*/}
         {/*</div>*/}
         <div className={s.descriptionBlock}>
-            <img src={props.profile.photos.large}/>
+            <img src={props.profile.photos.large || "https://png.pngtree.com/png-clipart/20190924/original/pngtree-user-vector-avatar-png-image_4830521.jpg"}/>
+            {props.isOwner && <input type="file" onChange={onMainPhotoSelected}/>}
             <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus}/>
         </div>
 
