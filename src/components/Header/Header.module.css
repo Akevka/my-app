@@ -7,17 +7,38 @@
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 .header img{
+
+
     padding-top: 5px;
     padding-left: 20px;
     width:98px;
+    top: 2px;
+    position: absolute;
 }
 .loginBlock {
     float: right;
     padding-right: 20px;
+
 }
 .loginBlock a {
     color: #dae2ea;
 }
 .name{
     color: #dae2ea;
+}
+.soc{
+    position: absolute;
+    top:10px;
+    width: 270px;
+    margin-left: 200px;
+
+}
+.h11{
+    position: absolute;
+    color: #ffa400;
+}
+.h12{
+    position: absolute;
+    left:101px;
+    
 }

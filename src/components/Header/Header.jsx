@@ -4,6 +4,7 @@ import {NavLink} from "react-router-dom";
 
     const Header = (props) =>{
        return <header className={s.header}>
+           <div className={s.soc}><h1 className={s.h11}>SociaN</h1><h1 className={s.h12}>Network</h1></div>
            <img src='https://rubberdam.club/wp-content/uploads/2016/03/User-Icon-01.png'/>
 
        <div className={s.loginBlock}>
