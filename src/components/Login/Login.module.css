@@ -1,10 +1,29 @@
 .loginForm{
-    margin-left: 30px;
-    margin-top: 20px;
+    margin-left: 300px;
+    margin-top: 40px;
+    padding-left: 20px;
+    padding-right: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #9cce8c;
+    width: 230px;
+    border-radius: 10px;
+
 }
 .email{
     margin-bottom: 10px;
 }
 .pass{
     margin-top: 10px;
+}
+.login{
+    margin-left: 340px;
+    top: 70px;
+}
+.logpas{
+    opacity: 0.7;
+    position: relative;
+    top: -160px;
+    left: 220px;
+    inline-size: auto;
 }

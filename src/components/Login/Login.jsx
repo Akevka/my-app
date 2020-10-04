@@ -14,16 +14,19 @@ const LoginForm = (props) => {
     return (
         <div className={s.loginForm}>
             <form onSubmit={props.handleSubmit}>
+
               <div className={s.email}>
                   <Field placeholder={"Email"} name={"email"}
                          validate={[required]}
                          component={Input}/>
               </div>
+
               <div className={s.pass}>
                   <Field    validate={[required]}
                             component={Input}
                             name={"password"} placeholder={"Password"} type={"password"}/>
               </div>
+
               <div>
                   <Field component={Input} name={"rememberMe"} type={"checkbox"}/> remember me
 
@@ -39,6 +42,9 @@ const LoginForm = (props) => {
               <div>
                   <button class="btn btn-primary" type="submit" value="Submit">Login</button>
               </div>
+                <div className={s.logpas}>akevka@yandex.ru</div>
+                <br/>
+                <div className={s.logpas}>96429642</div>
             </form>
         </div>
 
@@ -61,7 +67,7 @@ const Login = (props) => {
             }
 
         return <div>
-            <h1>Login</h1>
+            <h1 className={s.login}>Login</h1>
             <LoginReduxForm onSubmit={onSubmit} captchaUrl={props.captchaUrl}/>
         </div>
 

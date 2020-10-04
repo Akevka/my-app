@@ -16,18 +16,28 @@
     padding-left: 10px;
 }
 .file{
-    width: 8%;
-    top: 120px;
-    left: 368px;
+    width: 13.5%;
+    top: -135px;
+    left: -243px;
     opacity: 0;
-    position: absolute;
+    position: relative;
     z-index: 1;
 }
 .editAva{
-
-    bottom: 282px;
+    height: 25px;
+    bottom: 273px;
     right: 0px;
     opacity: 0.9;
     position: relative;
 
+
+}
+.btnAva{
+
+background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    height: 28px;
+    width: 130px;
+    border-color: #007bff;
 }

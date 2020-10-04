@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar/Navbar";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
-import {BrowserRouter, HashRouter, Route} from "react-router-dom";
+import {BrowserRouter, HashRouter, Redirect, Route} from "react-router-dom";
 //import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import UsersContainer from "./components/Users/UsersContainer";
 //import ProfileContainer from "./components/Profile/ProfileContainer";
@@ -32,11 +32,13 @@ class App extends Component {
         }
 
         return (
-            <HashRouter>
+            <BrowserRouter>
                 <div className='app-wrapper'>
                     <HeaderContainer/>
                     <Navbar/>
                     <div className='app-wrapper-content'>
+                        <Route exact path='/'
+                               render={() => <Redirect to={"/profile"}/>}/>
                         <Route path='/dialogs' render= { withSuspense(DialogsContainer)}/>
                         <Route path='/profile/:userId?'
                                render={ withSuspense(ProfileContainer)}/>
@@ -47,7 +49,7 @@ class App extends Component {
                         <Route path='/login' render={() => <LoginPage/>}/>
                     </div>
                 </div>
-            </HashRouter>);
+            </BrowserRouter>);
 
     }
 }

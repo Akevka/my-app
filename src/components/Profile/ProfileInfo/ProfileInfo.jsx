@@ -36,7 +36,7 @@ const ProfileInfo = (props) => {
             <img
                 src={props.profile.photos.large || "https://png.pngtree.com/png-clipart/20190924/original/pngtree-user-vector-avatar-png-image_4830521.jpg"}/>
             {props.isOwner && <input  className={s.file} type="file" onChange={onMainPhotoSelected}/>}
-                <div className={s.editAva}>{props.isOwner && <button  className="btn btn-primary">Change avatar</button>}</div>
+                <div className={s.editAva}>{props.isOwner && <button className={s.btnAva}  >change avatar</button>}</div>
             {editMode
                 ? <ProfileDataForm initialValues={props.profile}  profile={props.profile} onSubmit={onSubmit}/>
                 : <ProfileData goToEditMode={() => {setEditMode(true)}} profile={props.profile} isOwner={props.isOwner} />}
